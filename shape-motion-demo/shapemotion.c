@@ -185,7 +185,6 @@ void main()
   enableWDTInterrupts();      /**< enable periodic interrupt */
   or_sr(0x8);	              /**< GIE (enable interrupts) */
 
-
   for(;;) { 
     while (!redrawScreen) { /**< Pause CPU if screen doesn't need updating */
       P1OUT &= ~GREEN_LED;    /**< Green led off witHo CPU */
@@ -208,6 +207,6 @@ void wdt_c_handler()
     if (p2sw_read())
       redrawScreen = 1;
     count = 0;
-  }
+  } 
   P1OUT &= ~GREEN_LED;		    /**< Green LED off when cpu off */
 }

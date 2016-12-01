@@ -11,7 +11,7 @@
 #include "lcdutils.h"
 #include "msp430.h"
 
-u_char _orientation = 0;
+u_char _orientation = 1;
 
 /** LCD pin definitions*/
 /** SCLK & MOSI*/
